@@ -12,9 +12,12 @@
  *              See README for more detailed information
  * Date: Apr 3, 2017
  */
+#ifndef MYSORT_H
+#define MYSORT_H 
 
 #include <errno.h>
 #include <stdlib.h>
+#include <stddef.h>
 
 // Function prototypes
 // Functions returning an int indicates that memory allocation is needed for 
@@ -29,3 +32,5 @@ void quickSort(void *base, size_t nel, size_t width,
 	int (*cmpfunc)(const void *, const void *));
 int mergeSort(void *base, size_t nel, size_t width, 
 	int (*cmpfunc)(const void *, const void *));
+
+#endif
